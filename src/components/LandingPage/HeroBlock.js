@@ -2,13 +2,15 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Lottie from "react-lottie";
 
-import { Grid, Button, Typography } from "@material-ui/core";
+import { Grid, Button, Typography, useMediaQuery } from "@material-ui/core";
 
 import ButtonArrow from "../ui/ButtonArrow";
 
 import otherServicesAnimation from "../../animations/integrationAnimation/data.json";
 
 const HeroBlock = (props) => {
+  const matchesSM = useMediaQuery(props.theme.breakpoints.down("sm"));
+
   const defaultOptions = {
     loop: true,
     autoplay: true,
@@ -20,7 +22,12 @@ const HeroBlock = (props) => {
 
   return (
     <Grid container item>
-      <Grid container justify="flex-end" alignItems="center" direction="row">
+      <Grid
+        container
+        justify={matchesSM ? "center" : "flex-end"}
+        alignItems="center"
+        direction="row"
+      >
         <Grid sm item className={props.classes.heroTextContainer}>
           <Typography variant="h2" align="center">
             Delivering the latest TNM

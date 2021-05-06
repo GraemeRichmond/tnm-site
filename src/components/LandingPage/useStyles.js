@@ -59,6 +59,9 @@ export const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       marginLeft: 0,
     },
+    [theme.breakpoints.down("xs")]: {
+      marginBottom: "0.5em",
+    },
   },
   highlightedText: {
     fontFamily: "Pacifico",
@@ -77,6 +80,9 @@ export const useStyles = makeStyles((theme) => ({
     marginTop: "12em",
     [theme.breakpoints.down("sm")]: {
       padding: 25,
+    },
+    [theme.breakpoints.down("xs")]: {
+      marginTop: "3em",
     },
   },
   blogBackground: {
