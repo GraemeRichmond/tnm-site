@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import { Grid } from "@material-ui/core";
 
@@ -23,6 +23,10 @@ const ContactPage = (props) => {
   const [message, setMessage] = useState("");
   const [open, setOpen] = useState(false);
   const [alert, setAlert] = useState(false);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const onChange = (e) => {
     let valid;

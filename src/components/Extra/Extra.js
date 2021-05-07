@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import { Typography, Backdrop, Grid, useMediaQuery } from "@material-ui/core";
 
@@ -21,6 +21,10 @@ const Extra = (props) => {
   const handleToggle = () => {
     setOpenBackdrop(!openBackdrop);
   };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>
